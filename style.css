@@ -1,4 +1,4 @@
-﻿/* Padding and borders count inside an elements width, so without this a 300px box with 20px 
+/* Padding and borders count inside an elements width, so without this a 300px box with 20px 
    padding is treated as 340px wide and every layout calculation would then have to account for this */
 * {
     box-sizing: border-box;
@@ -146,17 +146,15 @@ header {
 }
 
 .brand {
-    font-family: var(--display);
-    font-variation-settings: "wdth" 72, "wght" 800;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 0.02em;
-    color: var(--text);
+    display: flex;
+    align-items: center;
     text-decoration: none;
 }
 
-    .brand:hover {
-        color: var(--yellow);
+    .brand img {
+        display: block;
+        height: 34px;
+        width: auto;
     }
 
 nav {
