@@ -1,4 +1,4 @@
-﻿/* 
+/* 
     JavaScript to control project fading and screenshot slideshows
     Operates by simply adding and removing CSS classes
 */
