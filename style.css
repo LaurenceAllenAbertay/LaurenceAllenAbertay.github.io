@@ -15,11 +15,13 @@
     --line: #24231C;
     /* body text */
     --text: #F3F1E7;
-
     /* fonts for the site, including fallbacks in case Google Fonts can't be accessed */
     --display: "Archivo", Arial, sans-serif;
     --body: "Chivo", Helvetica, Arial, sans-serif;
     --mono: "IBM Plex Mono", Consolas, monospace;
+    /* Scrollbar Styling */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(243, 241, 231, 0.22) transparent;
 }
 
 /* Page Base */
@@ -28,6 +30,7 @@ body {
     background: var(--black);
     color: var(--text);
     font-size: 16px;
+    font-family: var(--body);
     line-height: 1.6;
 }
 
@@ -248,6 +251,7 @@ nav {
 .hero-logo img {
     animation: fade-in 1.5s ease-out backwards;
 }
+
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -266,7 +270,7 @@ nav {
     padding-block: 56px;
     border-top: 1px solid var(--line);
 }
-    
+
     /* First project doesn't need line above it, handled elsewhere */
     .project:first-child {
         border-top: none;
@@ -332,7 +336,7 @@ nav {
     transition: opacity 0.4s ease;
 }
 
-/* JavaScript moves this between the images */
+    /* JavaScript moves this between the images */
     .shot.on {
         opacity: 1;
     }
@@ -412,6 +416,27 @@ nav {
         translate: 0 0;
     }
 
+/* --- Scrollbars --- */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(243, 241, 231, 0.22);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--yellow);
+    }
+
 /* --- About --- */
 
 /* Bio on the left, skills on the right */
@@ -454,11 +479,11 @@ nav {
     color: var(--grey);
 }
 
-    .about .edu .degree {
-        font-size: clamp(22px, 2.6vw, 30px);
-        line-height: 1.2;
-        color: var(--text);
-    }
+.about .edu .degree {
+    font-size: clamp(22px, 2.6vw, 30px);
+    line-height: 1.2;
+    color: var(--text);
+}
 
 
 .skills h4 {
